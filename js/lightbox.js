@@ -15,7 +15,8 @@ images.forEach(function(image) {
 					lightbox.removeChild(lightbox.firstChild);
 				}
 				lightbox.appendChild(lightboxImage);
-		lightbox.classList.add("active");									
+		lightbox.classList.add("active");			
+		document.querySelector('html').className='overflow';						
 	})
 })
 
@@ -24,6 +25,7 @@ lightbox.addEventListener('click',function(e) {
 	// console.log(e.currentTarget);==>currently click event on 
 	if(e.target==e.currentTarget) {		
 		lightbox.classList.remove("active");
+		document.querySelector('html').className="";
 	}
 
 })
